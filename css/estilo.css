@@ -1,0 +1,36 @@
+h1{
+    color: #71F2B5;
+transition: all 0.8s;
+}
+
+th{
+    background: #71F2B5;
+}
+#boton{
+    background: #71F2B5
+}
+
+li,ul{
+    font-size: 18px;
+    font-family: Century Gothic;
+    position: absolute;
+top: 90px;
+}
+
+
+#menu {
+  
+    position: absolute;
+    top: 0px;
+    
+    transition: all 0.10s;     
+}
+
+
+li>span{
+    font-family: Century Gothic;
+}
+header{
+    background: #1C94A3;
+    height: 130px;
+}
