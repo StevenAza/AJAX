@@ -1,6 +1,6 @@
 <?php
-$materia = $_POST['grupo'];
-$curso = $_POST['grados']
+$curso = $_POST['curso'];
+$grado = $_POST['grado']
 /*
 	$arrPrimero = array('Juan', 'Manuela', 'Alejandra', 'Pedro');
 	$arrSegundo = array('Miguel', 'Johana', 'Karen', 'Viviana');
@@ -8,30 +8,45 @@ $curso = $_POST['grados']
 	$arrRecorrer;
 */
 
-	$primerM = array('DANZAS TEATRO','DIBUJO');
-	$segundoM = array('DANZAS','MUSICA');
-	$tercerM = array('DANZAS','TEATRO','MUSICA');
-	$Select = "<label>SELECCIONE LA MATERIA </label>";
-	$Recorrer;
-	if($materia == 'A' && $curso='Primero'){
-		$Recorrer = $primerM;
+	$A = array('DANZAS','TEATRO','DIBUJO');
+	$B = array('DANZAS','MUSICA');
+	$C = array('DANZAS','TEATRO','MUSICA');
 
-	}else if ($materia == 'B'  && $curso='Primero' ){
 
-		$Recorrer = $segundoM;
 
-	}else if($materia=='C'  && $curso='Primero'){
-		$Recorrer = $tercerM;
-	}
+	if($grado == "Primero" && $curso =="A"){
+	
 
-	$miSelect .= "<select id='materias' name='materias' class='form-control'>";
-	foreach ($Recorrer as $mismaterias) {
-		$miSelect .= "<option value=".$mismaterias.">".$mismaterias."</option>";
+	$Select = "<select name='materia' id='materia'>";
+	foreach ($A as $mismaterias) {
+		$Select .= "<option value=".$mismaterias.">".$mismaterias."</option>";
 		}
 
-	 $Select .= "</select>";
-
+	 //$Select .= "</select>";
+		$Select .="</select>";
 	echo $Select;
+	}
+	//$miSelect .= "<select id='materias' name='materias' class='form-control'>";
+	elseif($grado =="Primero" && $curso=="B"){
+		$Select = "<select id='materia' name='materia'>";
+		foreach ($B as $mismaterias) {
+			# code...
+		}
+		$Select .="</select>";
+	echo $Select;
+	}
 
+elseif($grado =="Primero" && $curso=="C"){
+		$Select = "<select id='materia' name='materia'>";
+		foreach ($B as $mismaterias) {
+			# code...
+		}
+		$Select .="</select>";
+	echo $Select;
+	}
+	echo "";
+	else{
+		echo 'pailas';
+	}
 
 ?>

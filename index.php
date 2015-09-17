@@ -14,11 +14,14 @@
             <option value="Segundo">Segundo</option>
 		</select>
 
-		<div id="resultado"></div>
-	<div id="dos">
-					
+		<div id="grupo" name="grupo"><label>SELECCIONE EL GRUPO</label>
+		
+		</div>
 
-				</div>
+	<div id="materia" name="materia"><LABEL>SELECCIONE LAS MATERIAS:</LABEL>
+	
+
+	</div>
 			
 	</form>
 
@@ -33,7 +36,7 @@
 				data: { grado: grado}
 			})
 			.done(function( msg ) {
-				$("#resultado").html(msg);
+				$("#grupo").html(msg);
 			});
 		});
 
@@ -42,14 +45,15 @@
 <script>
 		//Funcion de JQuery
 		$( "#grupo").change(function() {
-			var grupo = $("#grupo").val();
+			var grado = $('#selectGrado').val();
+			var curso = $("#grupo").val();
 			$.ajax({
 				method: "POST",
 				url: "validarproceso.php",
-				data: { grupo: grupo}
+				data: { grado: grado, curso: curso}
 			})
 			.done(function( msg ) {
-				$("dos").html(msg);
+				$("materia").html(msg);
 			});
 		});
 

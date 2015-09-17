@@ -6,10 +6,10 @@
 	$arrTercero = array('Duber', 'Julian', 'Stiven');
 	$arrRecorrer;
 */
-
+$miSelect = "<label>SELECCIONE UNA OPCION</label>";
 	$primero = array('A','B','C');
 	$segundo = array('A','C');
-	$miSelect = "<label>SELECCIONE </label>";
+
 	if($miGrado == 'Primero'){
 		$arrRecorrer = $primero;
 
@@ -19,11 +19,11 @@
 
 	}
 	$miSelect .= "<select id='grupo' name='grupo' class='form-control'>";
-	foreach ($arrRecorrer as $nombre) {
-		$miSelect .= "<option value=".$nombre.">".$nombre."</option>";
+	foreach ($arrRecorrer as $grado) {
+		$miSelect .= "<option value=".$grado.">".$grado."</option>";
 		}
 
-	 $miSelect .= "</select>";
+	$miSelect .= "</select>";
 
 	echo $miSelect;
 
